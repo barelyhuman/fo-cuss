@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+PROJECT_DIR="${SCRIPT_DIR}/.."
+
+cd $PROJECT_DIR
+. .env
+
+COMMANDS="""
+cd /apps/focus
+. ~/.nvm/nvm.sh
+nvm use
+npm i -g pnpm@8.6.2
+pnpm i
+pnpm build
+pm2 restart focus
+"""
+
+rsync -aP --exclude=".git" --exclude="node_modules" --exclude=".env" ./ "$DEPLOY_HOST":/apps/focus
+
+ssh "$DEPLOY_HOST" "/bin/bash -lc '$COMMANDS'"
+

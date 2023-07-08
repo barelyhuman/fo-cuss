@@ -1,2 +1,12 @@
 /emails.txt
 /Noto_Sans_JP
+
+.parcel-cache
+dist
+# Local Netlify folder
+.netlify
+
+node_modules
+
+.env*
+!.env.example

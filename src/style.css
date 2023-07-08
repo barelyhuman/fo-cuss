@@ -1,0 +1,110 @@
+@import url(https://fonts.bunny.net/css?family=manrope:400,600);
+
+:root {
+  --font-sans: "Manrope", sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #181819;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+}
+
+p {
+  color: #fff;
+}
+
+.container {
+  height: 90vh;
+  border-radius: 10px;
+  width: 95vw;
+  overflow: hidden;
+  margin: 30px auto;
+  padding: 10px;
+}
+
+.glass {
+  background: rgba(13, 13, 13, 0.4);
+  backdrop-filter: saturate(100%) blur(4px);
+  padding: 20px;
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.working {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.timer {
+  text-align: center;
+}
+
+#timer {
+  padding: 0px;
+  margin: 0px;
+  vertical-align: center;
+  font-size: 200px;
+  line-height: 200px;
+}
+
+.setting-page {
+  text-align: right;
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+
+button {
+  background-color: white; /* Set the background color */
+  color: black; /* Set the text color */
+  border: none; /* Remove the border */
+  padding: 10px 20px; /* Add padding */
+  margin-right: 10px; /* Add some space between buttons */
+  border-radius: 5px; /* Add rounded corners */
+  cursor: pointer; /* Add a cursor on hover */
+  transition: background, box-shadow 250ms linear;
+}
+
+button:hover {
+  background-color: black; /* Change the background color on hover */
+  color: white; /* Change the background color on hover */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+}
+
+#toast {
+  position: fixed;
+  bottom: -100px;
+  display: flex;
+  border: 1px solid #649141;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  right: -100px;
+  bottom: 10px;
+  right: 20px;
+  background: #98c379;
+  color: #334a22;
+  opacity: 0;
+  height: 50px;
+  width: 250px;
+  border-radius: 6px;
+  transition: opacity 250ms linear;
+}
