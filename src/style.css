@@ -9,6 +9,7 @@ html {
 }
 
 body {
+  background-image: url("https://w.wallhaven.cc/full/01/wallhaven-01zmd9.jpg");
   font-family: var(--font-sans);
   background-color: #181819;
   background-repeat: no-repeat;

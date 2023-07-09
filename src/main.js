@@ -9,11 +9,12 @@ const start_alert = new Audio(gambareAudio);
 const end_alert = new Audio(onichanAudio);
 const reset_alert = new Audio(bakaAudio);
 
-main();
-
 let microQ = Promise.prototype.then.bind(Promise.resolve());
 
+main();
+
 function main() {
+  microQ(() => randomizeBackground());
   window.addEventListener("focus", () => {
     toast("Loading next background");
     microQ(() => randomizeBackground());
