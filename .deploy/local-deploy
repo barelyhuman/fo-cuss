@@ -12,6 +12,7 @@ cd /apps/focus
 nvm use
 npm i -g pnpm@8.6.2
 pnpm i
+pnpm clean
 pnpm build
 pm2 restart focus
 """
